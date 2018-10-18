@@ -1,6 +1,9 @@
 nginx:
   pkg.installed:
     - name: nginx
+  service.running:
+    - name: nginx
+    - enable: True
 
 /var/www/html/index.html:
   file.managed:
